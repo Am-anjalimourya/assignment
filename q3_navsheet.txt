@@ -1,0 +1,61 @@
+TERMINAL NAVIGATION PRACTICE SHEET:
+
+1. pwd (Print Working Directory)
+   Explanation: Shows the full path of the current directory you are currently working in.
+   Example: pwd
+
+2. ls(List) 
+   Explanation: Lists all files and folders present inside the current directory.
+   Example: ls
+
+3. mkdir (Make Directory)
+   Explanation: Creates a new folder/directory with the specified name.
+   Example: mkdir practice_folder
+
+4. cd(Change Directory)
+   Explanation: Navigates or moves inside a specific folder.
+   Example: cd practice_folder
+
+5. cd .. (Move Up/Back)
+   Explanation: Moves one step backward out of the current folder into the parent directory.
+   Example: cd ..
+
+6. clear (Clear Screen)
+   Explanation: Clears all previous text and commands from the terminal sreen for a clean workspace.
+   Example: clear
+
+
+TERMINAL PRACTICE CODE :
+
+PS C:\Users\PC\assignment> pwd
+
+Path                  
+----                  
+C:\Users\PC\assignment
+
+
+PS C:\Users\PC\assignment> ls
+
+
+    Directory: C:\Users\PC\assignment
+
+
+----                 -------------         ------ ----                               
+-a----        10/21/2026   9:06 PM            858 q1.txt                             
+-a----        10/22/2026  12:02 PM         109288 q2_setup.png                       
+-a----        10/22/2026  12:36 PM            222 q2_setup.txt                       
+-a----        10/22/2026   1:09 PM            841 q3_navsheet.txt                    
+
+
+PS C:\Users\PC\assignment> mkdir practice
+
+
+
+Mode                 LastWriteTime         Length Name                               
+----                 -------------         ------ ----                               
+d-----        10/22/2026   1:14 PM                practice                           
+
+
+PS C:\Users\PC\assignment> cd practice
+PS C:\Users\PC\assignment\practice> cd .. 
+PS C:\Users\PC\assignment> 
