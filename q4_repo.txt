@@ -1,0 +1,24 @@
+Repository with three meaningful commits:
+
+commit 1:
+first assignment commit
+
+commit 2:
+Added question 2 setup screenshot 
+
+commit 3:
+Terminal practice
+
+
+
+PS C:\Users\PC\assignment> git log --oneline
+34ba924 (HEAD -> main, origin/main) Terminal practice
+8942764 Added question 2 setup screenshot
+37e3b21 Added question 2 setup sreenshot
+af2215b first assignment commit
+
+
+
+
+GITHUB REPOSITORY LINK :
+https://github.com/Am-anjalimourya/assignment
