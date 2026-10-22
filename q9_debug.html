@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> HTML Debugging Practice</title>
+</head>
+<body>
+
+    <!--
+    ========================================
+    1. ORIGINAL BUGGY CODE (Problematic Area)
+    ========================================
+    
+    <h1>Welcome to My Website<h3>
+    <p>This is a test paragraph with <b>bold text<i> and italic text</b></i>.
+    <img src="avatar.jpg">
+    <a href=github.com>My GitHub Profile
+    <ul>
+        <li>HTML
+        <li>CSS
+    <ol>
+    -->
+
+    <!--
+    ========================================
+    2. BUGS FOUND AND FIXED:
+    ========================================
+    1. <h1> tag was improperly closed with <h3>. Fixed tag matching.
+    2. Incorrect tag nesting: <b> and <i> tags were closed out of order.
+    3. <img> tag was missing the required 'alt' attribute.
+    4. <a> tag 'href' attribute was missing quotes and the 'https://' protocol.
+    5. Unclosed <a> tag link text.
+    6. <ul> list was never closed, and an unclosed <ol> tag was wrongly placed instead.
+    7. <li> elements were left unclosed.
+    -->
+
+    <!--
+    ========================================
+    3. CORRECTED AND DEBUGGED CODE
+    ========================================
+    -->
+
+    <h1>Welcome to My Website</h1>
+
+    <p>This is a test paragraph with <b>bold text</b> and <i>italic text</i>.</p>
+
+    <img src="q2_setup.png" alt="Profile Screenshot" width="200">
+
+    <p><a href="https://github.com/Am-anjalimourya" target="_blank">My GitHub Profile</a></p>
+
+    <h3>My Learning Skills:</h3>
+    <ul>
+        <li>HTML Basics</li>
+        <li>CSS Basics</li>
+        <li>Git & GitHub</li>
+    </ul>
+
+</body>
+</html>
