@@ -1,0 +1,5 @@
+Live Server extension setup:
+
+Installed Live Server extension in VS Code.
+Verified installation by launching a local server for test files.
+Attached screenshot (q2_setup.png) as proof of installation and configuration.
