@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f2f4f8;
+        }
+
+        /* Main Dashboard Layout */
+        .dashboard {
+            min-height: 100vh;
+
+            display: grid;
+
+            grid-template-columns: 220px 1fr;
+            grid-template-rows: 70px 1fr;
+
+            grid-template-areas:
+                "sidebar header"
+                "sidebar content";
+        }
+
+        /* Sidebar */
+        .sidebar {
+            grid-area: sidebar;
+            background-color: #202b4d;
+            color: white;
+            padding: 25px;
+        }
+
+        .sidebar h2 {
+            margin-top: 0;
+            margin-bottom: 30px;
+        }
+
+        .sidebar a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 13px 10px;
+            margin-bottom: 8px;
+            border-radius: 6px;
+        }
+
+        .sidebar a:hover {
+            background-color: #34436d;
+        }
+
+        /* Header */
+        header {
+            grid-area: header;
+            background-color: white;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            padding: 0 30px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        }
+
+        header h1 {
+            margin: 0;
+            color: #202b4d;
+        }
+
+        .profile {
+            font-weight: bold;
+            color: #555;
+        }
+
+        /* Content */
+        .content {
+            grid-area: content;
+            padding: 30px;
+        }
+
+        .content h2 {
+            color: #202b4d;
+        }
+
+        /* Statistics */
+        .stats {
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 20px;
+            margin: 25px 0;
+        }
+
+        .stat-card {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+
+            box-shadow:
+                0 4px 10px rgba(0, 0, 0, 0.08);
+        }
+
+        .stat-card h3 {
+            margin: 0;
+            color: #777;
+            font-size: 15px;
+        }
+
+        .stat-card p {
+            margin: 10px 0 0;
+            font-size: 28px;
+            font-weight: bold;
+            color: #202b4d;
+        }
+
+        /* Lower Section */
+        .lower-section {
+            display: grid;
+
+            grid-template-columns: 2fr 1fr;
+
+            gap: 20px;
+        }
+
+        .box {
+            background-color: white;
+            padding: 25px;
+            border-radius: 10px;
+
+            box-shadow:
+                0 4px 10px rgba(0, 0, 0, 0.08);
+        }
+
+        .box h3 {
+            margin-top: 0;
+            color: #202b4d;
+        }
+
+        /* Activity */
+        .activity {
+            display: grid;
+            gap: 15px;
+        }
+
+        .activity-item {
+            padding: 15px;
+            background-color: #f2f4f8;
+            border-radius: 6px;
+        }
+
+        /* Progress */
+        .progress {
+            height: 12px;
+            background-color: #ddd;
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 15px 0;
+        }
+
+        .progress-bar {
+            width: 75%;
+            height: 100%;
+            background-color: #4c6fff;
+        }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+
+            .stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .lower-section {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 600px) {
+
+            .dashboard {
+                grid-template-columns: 1fr;
+
+                grid-template-rows:
+                    auto
+                    auto
+                    1fr;
+
+                grid-template-areas:
+                    "header"
+                    "sidebar"
+                    "content";
+            }
+
+            .sidebar {
+                padding: 15px;
+            }
+
+            .sidebar a {
+                display: inline-block;
+                margin-right: 5px;
+            }
+
+            .stats {
+                grid-template-columns: 1fr;
+            }
+
+            header {
+                padding: 15px 20px;
+            }
+
+            .content {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="dashboard">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+
+            <h2>MyDashboard</h2>
+
+            <a href="#">Dashboard</a>
+            <a href="#">Analytics</a>
+            <a href="#">Messages</a>
+            <a href="#">Projects</a>
+            <a href="#">Settings</a>
+
+        </aside>
+
+
+        <!-- Header -->
+        <header>
+
+            <h1>Dashboard</h1>
+
+            <div class="profile">
+                Welcome, Anjali
+            </div>
+
+        </header>
+
+
+        <!-- Main Content -->
+        <main class="content">
+
+            <h2>Overview</h2>
+
+            <!-- Statistics Cards -->
+            <section class="stats">
+
+                <div class="stat-card">
+                    <h3>Total Users</h3>
+                    <p>1,250</p>
+                </div>
+
+                <div class="stat-card">
+                    <h3>Projects</h3>
+                    <p>48</p>
+                </div>
+
+                <div class="stat-card">
+                    <h3>Revenue</h3>
+                    <p>₹52K</p>
+                </div>
+
+                <div class="stat-card">
+                    <h3>Orders</h3>
+                    <p>320</p>
+                </div>
+
+            </section>
+
+
+            <!-- Lower Grid -->
+            <section class="lower-section">
+
+                <!-- Recent Activity -->
+                <div class="box">
+
+                    <h3>Recent Activity</h3>
+
+                    <div class="activity">
+
+                        <div class="activity-item">
+                            New project created
+                        </div>
+
+                        <div class="activity-item">
+                            Payment received
+                        </div>
+
+                        <div class="activity-item">
+                            New user registered
+                        </div>
+
+                        <div class="activity-item">
+                            Project completed
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Progress -->
+                <div class="box">
+
+                    <h3>Project Progress</h3>
+
+                    <p>Website Development</p>
+
+                    <div class="progress">
+                        <div class="progress-bar"></div>
+                    </div>
+
+                    <strong>75% Completed</strong>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+</body>
+</html>
