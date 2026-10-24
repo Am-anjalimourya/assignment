@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Travel Landing Page</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f5f7fa;
+        }
+
+        /* HEADER */
+
+        header {
+            background-color: #173f5f;
+            color: white;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            padding: 20px 50px;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 25px;
+        }
+
+
+        /* HERO */
+
+        .hero {
+            min-height: 450px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            text-align: center;
+
+            padding: 40px;
+
+            background:
+                linear-gradient(
+                    rgba(0, 0, 0, 0.4),
+                    rgba(0, 0, 0, 0.4)
+                ),
+                url("https://images.unsplash.com/photo-1500534623283-312aade485b7")
+                center / cover;
+        }
+
+        .hero-content {
+            color: white;
+            max-width: 650px;
+        }
+
+        .hero h2 {
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 20px;
+        }
+
+        .hero button {
+            margin-top: 20px;
+
+            padding: 13px 25px;
+
+            border: none;
+            border-radius: 6px;
+
+            background-color: #ffb703;
+            color: #222;
+
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+
+        /* DESTINATIONS */
+
+        .destinations {
+            padding: 45px 50px;
+        }
+
+        .destinations h2 {
+            text-align: center;
+            color: #173f5f;
+            margin-bottom: 30px;
+        }
+
+
+        /* CARDS */
+
+        .cards {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 25px;
+        }
+
+        .card {
+            background-color: white;
+
+            border-radius: 12px;
+
+            overflow: hidden;
+
+            box-shadow:
+                0 4px 12px rgba(0, 0, 0, 0.12);
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 20px;
+        }
+
+        .card h3 {
+            margin-top: 0;
+            color: #173f5f;
+        }
+
+        .card p {
+            color: #666;
+            line-height: 1.5;
+        }
+
+
+        /* FOOTER */
+
+        footer {
+            background-color: #173f5f;
+
+            color: white;
+
+            text-align: center;
+
+            padding: 20px;
+        }
+
+
+        /* BREAKPOINT 1 - TABLET */
+
+        @media (max-width: 800px) {
+
+            header {
+                padding: 20px 25px;
+            }
+
+            .hero h2 {
+                font-size: 38px;
+            }
+
+            .cards {
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+            .destinations {
+                padding: 35px 25px;
+            }
+        }
+
+
+        /* BREAKPOINT 2 - MOBILE */
+
+        @media (max-width: 500px) {
+
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav a {
+                margin: 0 8px;
+            }
+
+            .hero {
+                min-height: 400px;
+                padding: 25px;
+            }
+
+            .hero h2 {
+                font-size: 30px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            .destinations {
+                padding: 30px 15px;
+            }
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+    <!-- HEADER -->
+
+    <header>
+
+        <h1>TravelGo</h1>
+
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Destinations</a>
+            <a href="#">Contact</a>
+        </nav>
+
+    </header>
+
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <h2>Explore The World</h2>
+
+            <p>
+                Discover beautiful places and create
+                unforgettable memories.
+            </p>
+
+            <button>
+                Explore Now
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- DESTINATIONS -->
+
+    <section class="destinations">
+
+        <h2>Popular Destinations</h2>
+
+
+        <div class="cards">
+
+
+            <div class="card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34"
+                    alt="Paris"
+                >
+
+                <div class="card-content">
+
+                    <h3>Paris</h3>
+
+                    <p>
+                        Experience the beauty, culture
+                        and romance of Paris.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1537996194471-e657df975ab4"
+                    alt="Bali"
+                >
+
+                <div class="card-content">
+
+                    <h3>Bali</h3>
+
+                    <p>
+                        Relax on beautiful beaches
+                        and enjoy tropical adventures.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1548013146-72479768bada"
+                    alt="India"
+                >
+
+                <div class="card-content">
+
+                    <h3>India</h3>
+
+                    <p>
+                        Explore historical places,
+                        culture and amazing food.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>© 2026 TravelGo. All Rights Reserved.</p>
+
+    </footer>
+
+
+</body>
+</html>
