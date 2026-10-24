@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Responsive Profile & Product Cards</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f6fb;
+        }
+
+        /* Main container */
+
+        .cards {
+            min-height: 100vh;
+
+            padding: 40px 20px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            gap: 40px;
+
+            flex-wrap: wrap;
+        }
+
+
+        /* Common Card */
+
+        .card {
+            width: 330px;
+            max-width: 100%;
+
+            background-color: white;
+
+            border-radius: 18px;
+
+            overflow: hidden;
+
+            box-shadow:
+                0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+
+        /* PROFILE CARD */
+
+        .profile-header {
+            height: 130px;
+
+            background: linear-gradient(
+                135deg,
+                #6c63ff,
+                #00bcd4
+            );
+
+            position: relative;
+        }
+
+        .profile-image {
+            width: 100px;
+            height: 100px;
+
+            border-radius: 50%;
+
+            border: 5px solid white;
+
+            position: absolute;
+
+            bottom: -50px;
+            left: 50%;
+
+            transform: translateX(-50%);
+
+            object-fit: cover;
+        }
+
+        .profile-content {
+            text-align: center;
+
+            padding: 65px 20px 25px;
+        }
+
+        .profile-content h2 {
+            margin: 0 0 8px;
+        }
+
+        .role {
+            color: #777;
+        }
+
+
+        /* PROFILE STATS */
+
+        .stats {
+            display: flex;
+
+            justify-content: space-around;
+
+            gap: 10px;
+
+            margin: 25px 0;
+        }
+
+        .stats div {
+            min-width: 0;
+        }
+
+        .stats strong {
+            display: block;
+
+            font-size: 20px;
+        }
+
+        .stats span {
+            font-size: 13px;
+            color: #888;
+        }
+
+
+        /* BUTTON */
+
+        .follow-btn {
+            padding: 10px 35px;
+
+            border: none;
+
+            border-radius: 20px;
+
+            background-color: #5b5be7;
+
+            color: white;
+
+            cursor: pointer;
+        }
+
+
+        /* PRODUCT CARD */
+
+        .product-image {
+            width: 100%;
+
+            height: 220px;
+
+            object-fit: cover;
+
+            display: block;
+        }
+
+        .product-content {
+            padding: 20px;
+        }
+
+        .discount {
+            display: inline-block;
+
+            background-color: #ff4d6d;
+
+            color: white;
+
+            padding: 5px 10px;
+
+            border-radius: 15px;
+
+            font-size: 13px;
+        }
+
+        .product-content h2 {
+            margin: 12px 0 8px;
+        }
+
+        .rating {
+            color: #f5a623;
+
+            margin-bottom: 12px;
+        }
+
+        .price {
+            font-size: 24px;
+
+            font-weight: bold;
+        }
+
+        .old-price {
+            color: #999;
+
+            text-decoration: line-through;
+
+            margin-left: 8px;
+        }
+
+        .cart-btn {
+            width: 100%;
+
+            padding: 12px;
+
+            margin-top: 15px;
+
+            border: none;
+
+            border-radius: 8px;
+
+            background-color: #5b5be7;
+
+            color: white;
+
+            cursor: pointer;
+        }
+
+
+        /* RESPONSIVENESS FIX 1
+           Tablet */
+
+        @media (max-width: 750px) {
+
+            .cards {
+                gap: 25px;
+                padding: 30px 15px;
+            }
+
+            .card {
+                width: 100%;
+                max-width: 380px;
+            }
+
+        }
+
+
+        /* RESPONSIVENESS FIX 2
+           Mobile */
+
+        @media (max-width: 450px) {
+
+            .cards {
+                padding: 20px 10px;
+            }
+
+            .card {
+                width: 100%;
+                border-radius: 14px;
+            }
+
+            .profile-header {
+                height: 110px;
+            }
+
+            .profile-image {
+                width: 85px;
+                height: 85px;
+
+                bottom: -42px;
+            }
+
+            .profile-content {
+                padding-top: 55px;
+            }
+
+            .profile-content h2 {
+                font-size: 21px;
+            }
+
+            .stats {
+                margin: 20px 0;
+            }
+
+            .stats strong {
+                font-size: 17px;
+            }
+
+            .stats span {
+                font-size: 11px;
+            }
+
+            .product-image {
+                height: 190px;
+            }
+
+            .product-content {
+                padding: 16px;
+            }
+
+            .product-content h2 {
+                font-size: 21px;
+            }
+
+            .price {
+                font-size: 21px;
+            }
+
+            .old-price {
+                font-size: 13px;
+            }
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+    <div class="cards">
+
+
+        <!-- PROFILE CARD -->
+
+        <div class="card">
+
+            <div class="profile-header">
+
+                <img
+                    class="profile-image"
+                    src="https://images.unsplash.com/photo-1494790108377-be9c29b29330"
+                    alt="Profile"
+                >
+
+            </div>
+
+
+            <div class="profile-content">
+
+                <h2>Riya Verma</h2>
+
+                <p class="role">
+                    UI Designer · Jaipur
+                </p>
+
+
+                <div class="stats">
+
+                    <div>
+                        <strong>38</strong>
+                        <span>Projects</span>
+                    </div>
+
+                    <div>
+                        <strong>980</strong>
+                        <span>Followers</span>
+                    </div>
+
+                    <div>
+                        <strong>215</strong>
+                        <span>Following</span>
+                    </div>
+
+                </div>
+
+
+                <button class="follow-btn">
+                    Follow
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- PRODUCT CARD -->
+
+        <div class="card">
+
+            <img
+                class="product-image"
+                src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e"
+                alt="Wireless Headphones"
+            >
+
+
+            <div class="product-content">
+
+                <span class="discount">
+                    -25%
+                </span>
+
+                <h2>
+                    Wireless Headphones
+                </h2>
+
+                <div class="rating">
+                    ★★★★★ (28)
+                </div>
+
+                <div>
+
+                    <span class="price">
+                        ₹2,499
+                    </span>
+
+                    <span class="old-price">
+                        ₹3,299
+                    </span>
+
+                </div>
+
+                <button class="cart-btn">
+                    Add to Cart
+                </button>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</body>
+
+</html>
