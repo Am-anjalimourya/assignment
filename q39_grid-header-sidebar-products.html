@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Grid</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f6fb;
+        }
+
+        /* Main Layout */
+        .page {
+            display: grid;
+            grid-template-columns: 220px 1fr;
+            grid-template-rows: 70px 1fr;
+            min-height: 100vh;
+        }
+
+        /* Header */
+        header {
+            grid-column: 1 / 3;
+            background-color: #23408e;
+            color: white;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            padding: 0 30px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        header a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+        }
+
+        /* Sidebar */
+        aside {
+            background-color: white;
+            padding: 25px;
+            border-right: 1px solid #ddd;
+        }
+
+        aside h2 {
+            color: #23408e;
+            font-size: 20px;
+        }
+
+        aside a {
+            display: block;
+            text-decoration: none;
+            color: #444;
+            padding: 12px 0;
+        }
+
+        aside a:hover {
+            color: #23408e;
+        }
+
+        /* Products Area */
+        main {
+            padding: 30px;
+        }
+
+        .products {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        /* Product Card */
+        .product {
+            background-color: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+        }
+
+        .product img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .product-content {
+            padding: 18px;
+        }
+
+        .product h2 {
+            margin: 0 0 8px;
+            font-size: 20px;
+        }
+
+        .product p {
+            color: #666;
+        }
+
+        .price {
+            font-size: 20px;
+            font-weight: bold;
+            color: #23408e;
+        }
+
+        button {
+            width: 100%;
+            margin-top: 12px;
+            padding: 10px;
+
+            border: none;
+            border-radius: 6px;
+            background-color: #23408e;
+            color: white;
+
+            cursor: pointer;
+        }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+
+            .products {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 600px) {
+
+            .page {
+                grid-template-columns: 1fr;
+                grid-template-rows: 70px auto 1fr;
+            }
+
+            header {
+                grid-column: 1;
+            }
+
+            aside {
+                border-right: none;
+                border-bottom: 1px solid #ddd;
+            }
+
+            .products {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="page">
+
+        <!-- Header -->
+        <header>
+            <h1>ShopEasy</h1>
+
+            <nav>
+                <a href="#">Home</a>
+                <a href="#">Cart</a>
+            </nav>
+        </header>
+
+
+        <!-- Sidebar -->
+        <aside>
+
+            <h2>Categories</h2>
+
+            <a href="#">All Products</a>
+            <a href="#">Shoes</a>
+            <a href="#">Watches</a>
+            <a href="#">Headphones</a>
+            <a href="#">Bags</a>
+
+        </aside>
+
+
+        <!-- Product Area -->
+        <main>
+
+            <h2>Our Products</h2>
+
+            <div class="products">
+
+                <div class="product">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1542291026-7eec264c27ff"
+                        alt="Shoes"
+                    >
+
+                    <div class="product-content">
+                        <h2>Running Shoes</h2>
+                        <p>Comfortable sports shoes.</p>
+                        <div class="price">₹1,999</div>
+                        <button>Add to Cart</button>
+                    </div>
+
+                </div>
+
+
+                <div class="product">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1523275335684-37898b6baf30"
+                        alt="Watch"
+                    >
+
+                    <div class="product-content">
+                        <h2>Smart Watch</h2>
+                        <p>Modern watch for everyday use.</p>
+                        <div class="price">₹2,499</div>
+                        <button>Add to Cart</button>
+                    </div>
+
+                </div>
+
+
+                <div class="product">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e"
+                        alt="Headphones"
+                    >
+
+                    <div class="product-content">
+                        <h2>Headphones</h2>
+                        <p>Wireless headphones with clear sound.</p>
+                        <div class="price">₹1,499</div>
+                        <button>Add to Cart</button>
+                    </div>
+
+                </div>
+
+
+                <div class="product">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62"
+                        alt="Bag"
+                    >
+
+                    <div class="product-content">
+                        <h2>Travel Bag</h2>
+                        <p>Stylish and spacious travel bag.</p>
+                        <div class="price">₹1,799</div>
+                        <button>Add to Cart</button>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </main>
+
+    </div>
+
+</body>
+</html>
