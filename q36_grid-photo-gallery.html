@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Photo Gallery</title>
+    <style>
+        /* 1. Base Resets */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            padding: 40px 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        header h1 {
+            color: #333;
+            font-size: 2.5rem;
+        }
+
+        /* 2. CSS Grid Layout */
+        .gallery-container {
+            display: grid;
+            /* Creates a fixed 3-column layout on standard desktop screens */
+            grid-template-columns: repeat(3, 1fr); 
+            gap: 20px; 
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* 3. Gallery Card Styling */
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+            background-color: #fff;
+            aspect-ratio: 3 / 2; /* Keeps all cards uniform in shape */
+            transition: transform 0.3s ease, box-shadow 0.3s ease; 
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Responsive image behavior */
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* 4. Basic Media Queries for Screen Adjustments */
+        @media (max-width: 900px) {
+            .gallery-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 500px) {
+            .gallery-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>My Photo Gallery</h1>
+    </header>
+
+    <main class="gallery-container">
+        <div class="gallery-item"><img src="https://media.istockphoto.com/id/1827291486/photo/a-dedicated-mentor-is-explaining-mentees-importance-of-project-while-sitting-at-the-boardroom.jpg?s=612x612&w=0&k=20&c=whMTmOCyOUfNqoNBe8GPlmcNUM-aCfqD-0whdFPQpO4=" alt="Gallery Image 1"></div>
+        <div class="gallery-item"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPaRRYsk1klSytDZbPjV8kB-UZapn8MEndb7IYeYkmQQ&s" alt="Gallery Image 2"></div>
+        <div class="gallery-item"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPGKt4mYATH-sVxu9eF0-502_-8P091JLWbpj61-e0tSMpoLWjbI5OXsM&s=10" alt="Gallery Image 3"></div>
+        <div class="gallery-item"><img src="https://img.magnific.com/premium-vector/proanto-design_863867-2038.jpg?semt=ais_hybrid&w=740&q=80" alt="Gallery Image 4"></div>
+        <div class="gallery-item"><img src="https://media.istockphoto.com/id/998390080/photo/lavender-field-at-sunset.jpg?s=612x612&w=0&k=20&c=-4KuH9Rho29rxPSJZIZoKNL5XGBp7N_MaXD-aBxW_E8=" alt="Gallery Image 5"></div>
+        <div class="gallery-item"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiJFH-saKM9BvRU8kNQo8HBmpWbWlO2RsaOSqeQepKq2XKqYBsfcL994o&s=10" alt="Gallery Image 6"></div>
+    </main>
+
+</body>
+</html>
